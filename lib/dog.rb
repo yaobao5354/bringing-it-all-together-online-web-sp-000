@@ -74,13 +74,7 @@ class Dog
     SQL
     row = DB[:conn].execute(sql)
     if row != []
-      self.new_from_db(row[0])
-      sql = <<-SQL
-       SELECT *
-       FROM dogs
-      SQL
-      binding.pry
-      DB[:conn].execute(sql)
+      self.create(attribute)
     end
 
   end
