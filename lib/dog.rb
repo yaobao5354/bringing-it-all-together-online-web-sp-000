@@ -73,6 +73,7 @@ class Dog
     SQL
     row = DB[:conn].execute(sql)
     if row == []
+      binding.pry
       self.create(attribute)
     else
       #binding.pry
