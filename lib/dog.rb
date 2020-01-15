@@ -64,7 +64,6 @@ class Dog
   end
 
   def self.find_or_create_by(attribute)
-    binding.pry
     name = attribute[:name]
     breed = attribute[:breed]
     sql = <<-SQL
@@ -73,7 +72,7 @@ class Dog
      WHERE name = "#{name}" AND breed = "#{breed}"
     SQL
     row = DB[:conn].execute(sql)
-
+    binding.pry
     if row == []
       self.create(attribute)
     else
