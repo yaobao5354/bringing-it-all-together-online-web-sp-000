@@ -46,7 +46,7 @@ class Dog
       :breed => row[2]
     }
     new_dog = self.new(row[0],attribute_hash)
-    self
+    new_dog
   end
 
   def self.find_by_id(id)
