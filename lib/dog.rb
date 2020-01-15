@@ -78,7 +78,6 @@ class Dog
     else
       self.find_by_id(row[0][0])
     end
-    self.find_by_id(row[0][0])
 
   end
 
