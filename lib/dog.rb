@@ -76,6 +76,7 @@ class Dog
     binding.pry
     if row != []
       self.create(attribute)
+      binding.pry 
     end
 
   end
