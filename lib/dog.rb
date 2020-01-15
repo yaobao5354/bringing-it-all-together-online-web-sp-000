@@ -75,7 +75,7 @@ class Dog
     if row == []
       self.create(attribute)
     else
-      binding.pry
+      #binding.pry
       self.new_from_db(row)
     end
   end
