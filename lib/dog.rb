@@ -72,9 +72,7 @@ class Dog
      WHERE name = "#{attribute[:name]}" AND breed = "#{attribute[:breed]}"
     SQL
     row = DB[:conn].execute(sql)
-    if row == []
-      self.create(attribute)
-    else
+    if row != []
       self.find_by_id(row[0][0])
     end
 
