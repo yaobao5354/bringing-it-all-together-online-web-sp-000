@@ -72,9 +72,7 @@ class Dog
      WHERE name = "wrong" AND breed = "#{breed}"
     SQL
     row = DB[:conn].execute(sql)
-    binding.pry
     if row == []
-      binding.pry
       self.create(attribute)
     else
       self.find_by_id(row[0][0])
