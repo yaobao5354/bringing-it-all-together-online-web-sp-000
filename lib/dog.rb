@@ -73,7 +73,6 @@ class Dog
     SQL
     row = DB[:conn].execute(sql)
     if row != []
-      binding.pry
       self.new_from_db(row)
     end
 
