@@ -76,7 +76,6 @@ class Dog
       self.create(attribute)
     else
       self.find_by_id(row[0][0])
-      binding.pry
     end
 
   end
