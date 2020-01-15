@@ -64,12 +64,12 @@ class Dog
   end
 
   def self.find_or_create_by(attribute)
-    name = attribute[:name]
-    breed = attribute[:breed]
+    #name = attribute[:name]
+    #breed = attribute[:breed]
     sql = <<-SQL
      SELECT *
      FROM dogs
-     WHERE name = "wrong" AND breed = "#{breed}"
+     WHERE name = "#{attribute[:name]}" AND breed = "#{attribute[:breed]}"
     SQL
     row = DB[:conn].execute(sql)
     if row == []
