@@ -67,7 +67,7 @@ class Dog
     name = attribute[:name]
     breed = attribute[:breed]
     sql = <<-SQL
-     SELECT id
+     SELECT *
      FROM dogs
      WHERE name = "wrong" AND breed = "#{breed}"
     SQL
