@@ -72,6 +72,7 @@ class Dog
      WHERE name = "#{name}" AND breed = "#{breed}"
     SQL
     row = DB[:conn].execute(sql)
+    binding.pry
     if row == []
       binding.pry
       self.create(attribute)
