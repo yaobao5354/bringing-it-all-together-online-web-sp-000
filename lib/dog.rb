@@ -78,6 +78,7 @@ class Dog
     else
       #binding.pry
       self.find_by_id(row[0][0])
+      binding.pry
     end
   end
 
