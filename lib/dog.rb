@@ -78,7 +78,7 @@ class Dog
       self.create(attribute)
     else
       #binding.pry
-      self.new_from_db(row)
+      self.find_by_id(row[0])
     end
   end
 
